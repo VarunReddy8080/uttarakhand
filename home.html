@@ -2,11 +2,210 @@
 <html ng-app = 'uk_app'>
     <head>
         <title>Uttarakhand</title>
-        <link rel = 'stylesheet' type = 'text/css' href = 'main.css'>
         <script src = 'script_1.js'></script>
         <script src = 'script_2.js'></script>
         <script src = 'script_3.js'></script>
-        <script src = 'main.js'></script>
+        <script>
+var uk_app = angular.module ('uk_app', ['ngCookies']);
+uk_app.controller ('uk_ctrl', function ($scope) {
+    $scope.change_question = function (new_index) {
+        $scope.active = questions [new_index];
+    }
+    $scope.check_answer = function (option) {
+        $scope.active.options [option] [1] = 'wrong';
+        $scope.active.options [$scope.active.correct] [1] = 'correct';
+    }
+    $scope.images = ['slide-info-1.png', 'slide-info-2.png', 'slide-info-3.png', 'slide-info-4.png', 'slide-info-5.png'];
+    var questions = [
+        {question: '1 - On what day is Uttarakhand day celebrated?', options: ['April 30', 'July 1', 'March 26', 'November 9'], correct: 2},
+        {question: '2 - What is the summer capital of Uttarakhand?', options: ['Haridwar', 'Nainital', 'Dehradun', 'Roorkee'], correct: 2},
+        {question: '3 - What is the winter capital of Uttarakhand?', options: ['Rudrapur', 'Gairsain', 'Kashipur', 'Rishikesh'], correct: 1},
+        {question: '4 - How many national parks are there in Uttarakhand?', options: ['3', '7', '5', '13'], correct: 1},
+        {question: '5 - Which is the other official language of Uttarakhand besides Hindi?', options: ['Nepali', 'Urdu', 'Sanskrit', 'English'], correct: 2},
+        {question: '6 - How many districts are there in Uttarakhand?', options: ['8', '10', '12', '13'], correct: 3},
+        {question: '7 - Who was the first Chief Minister of Uttarakhand?', options: ['BS Koshyari', 'ND Tiwari', 'Nityanand Swami', 'BC Khanduri'], correct: 2},
+        {question: '8 - Which is the highest mountain in Uttarakhand?', options: ['Nanda Devi', 'K2', 'Kangchenjunga', 'Chimborazo'], correct: 0},
+        {question: '9 - Which river passes through the Valley of Flowers?', options: ['Alaknanda', 'Bhagirati', 'Ramganga', 'Pushpawati'], correct: 3},
+        {question: '10 - Which city is also known as the \'yoga capital\' of the world?', options: ['Rishikesh', 'Dehradun', 'Nainital', 'Haridwar'], correct: 0},
+        {question: '11 - When was Uttarakhand established as a seperate state?', options: ['1998', '2000', '2001', '2003'], correct: 1},
+        {question: '12 - Which is the largest district in Uttarakhand by area?', options: ['Uttarkharshi', 'Pithoragarh', 'Pauri Garhwal', 'Nainital'], correct: 0}
+    ];
+    $scope.set = [];
+    for (index in questions) {
+        $scope.set.push (parseInt (index));
+        for (inner in questions [index].options) {
+            questions [index].options [inner] = [questions [index].options [inner], 'normal'];
+        }
+    }
+    $scope.change_question (0);
+});
+        </script>
+        <style>
+@font-face {
+    font-family: heading;
+    src: url('font_1.otf')
+}
+@font-face {
+    font-family: light;
+    src: url('font_2.otf')
+}
+@font-face {
+    font-family: regular;
+    src: url('font_3.otf')
+}
+body {
+    background-color: #daf3ff;
+    color: #0b637e;
+    font-family: regular;
+    font-size: 20px;
+}
+a {
+    color: #ffffff;
+    margin: 0px 5px 0px 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.link {
+    margin: 0px 5px 0px 5px;
+}
+a:hover {
+    color: #d7fff8;
+}
+a:active {
+    color: #9bffee;
+}
+.bar {
+    background-color: #0b637e;
+    color: #ffffff;
+    font-family: light;
+    font-size: 30px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 20px;
+    padding: 15px 10px 15px 10px;
+    position: fixed;
+}
+.nav {
+    margin: 0px 20px 0px 0px;
+    float: right;
+}
+.heading, h1, h2 {
+    font-family: heading;
+}
+h1 {
+    font-size: 45px;
+}
+h2 {
+    font-size: 35px;
+}
+.main {
+    padding: 40px 5% 0px 5%;
+}
+.box {
+    width: 80%;
+    padding: 40px 10% 40px 10%;
+    left: 0px;
+    top: 0px;
+}
+.gold {
+    background-color: #ffd900;
+    color: #000000;
+}
+.info-1 {
+    background-image: url('color-1.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-1:hover {
+    background-image: url('slide-info-1.png');
+    color: #2c3041;
+}
+.info-2 {
+    background-image: url('color-2.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-2:hover {
+    background-image: url('slide-info-2.png');
+    color: #e9e9e9;
+}
+.info-3 {
+    background-image: url('color-3.png');
+    color: #e2e2e2;
+    transition: all 0.3s;
+}
+.info-3:hover {
+    background-image: url('slide-info-3.png');
+}
+.info-4 {
+    background-image: url('color-1.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-4:hover {
+    background-image: url('slide-info-4.png');
+    color: #9bcac0;
+}
+.info-5 {
+    background-image: url('color-2.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-5:hover {
+    background-image: url('slide-info-5.png');
+    color: #ffffff;
+}
+.quiz {
+    background-color: #3ec5ee;
+    color: #ffffff;
+}
+.option {
+    height: 40px;
+    padding: 7px 20px 13px 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 10px 0px 0px;
+    font-family: regular;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.status-normal {
+    background-color: #15586e;
+    color: #ffffff;
+}
+.status-normal:hover {
+    background-color: #0b3b4b;
+    color: #ffffff;
+}
+.status-normal:active {
+    background-color: #052733;
+    color: #ffffff;
+}
+.status-correct {
+    background-color: #22a84a;
+    color: #ffffff;
+}
+.status-wrong {
+    background-color: #e72323;
+    color: #ffffff;
+}
+.control {
+    background-color: #172831;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 10px 0px 0px;
+    font-family: regular;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+        </style>
     </head>
     <body ng-controller = 'uk_ctrl'>
         <div class = 'bar'>
