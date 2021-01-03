@@ -1,0 +1,164 @@
+@font-face {
+    font-family: heading;
+    src: url('font_1.otf')
+}
+@font-face {
+    font-family: light;
+    src: url('font_2.otf')
+}
+@font-face {
+    font-family: regular;
+    src: url('font_3.otf')
+}
+body {
+    background-color: #daf3ff;
+    color: #0b637e;
+    font-family: regular;
+    font-size: 20px;
+}
+a {
+    color: #ffffff;
+    margin: 0px 5px 0px 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.link {
+    margin: 0px 5px 0px 5px;
+}
+a:hover {
+    color: #d7fff8;
+}
+a:active {
+    color: #9bffee;
+}
+.bar {
+    background-color: #0b637e;
+    color: #ffffff;
+    font-family: light;
+    font-size: 30px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 20px;
+    padding: 15px 10px 15px 10px;
+    position: fixed;
+}
+.nav {
+    margin: 0px 20px 0px 0px;
+    float: right;
+}
+.heading, h1, h2 {
+    font-family: heading;
+}
+h1 {
+    font-size: 45px;
+}
+h2 {
+    font-size: 35px;
+}
+.main {
+    padding: 40px 5% 0px 5%;
+}
+.box {
+    width: 80%;
+    padding: 40px 10% 40px 10%;
+    left: 0px;
+    top: 0px;
+}
+.gold {
+    background-color: #ffd900;
+    color: #000000;
+}
+.info-1 {
+    background-image: url('color-1.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-1:hover {
+    background-image: url('slide-info-1.png');
+    color: #2c3041;
+}
+.info-2 {
+    background-image: url('color-2.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-2:hover {
+    background-image: url('slide-info-2.png');
+    color: #e9e9e9;
+}
+.info-3 {
+    background-image: url('color-3.png');
+    color: #e2e2e2;
+    transition: all 0.3s;
+}
+.info-3:hover {
+    background-image: url('slide-info-3.png');
+}
+.info-4 {
+    background-image: url('color-1.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-4:hover {
+    background-image: url('slide-info-4.png');
+    color: #9bcac0;
+}
+.info-5 {
+    background-image: url('color-2.png');
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.info-5:hover {
+    background-image: url('slide-info-5.png');
+    color: #ffffff;
+}
+.quiz {
+    background-color: #3ec5ee;
+    color: #ffffff;
+}
+.option {
+    height: 40px;
+    padding: 7px 20px 13px 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 10px 0px 0px;
+    font-family: regular;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.status-normal {
+    background-color: #15586e;
+    color: #ffffff;
+}
+.status-normal:hover {
+    background-color: #0b3b4b;
+    color: #ffffff;
+}
+.status-normal:active {
+    background-color: #052733;
+    color: #ffffff;
+}
+.status-correct {
+    background-color: #22a84a;
+    color: #ffffff;
+}
+.status-wrong {
+    background-color: #e72323;
+    color: #ffffff;
+}
+.control {
+    background-color: #172831;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 10px 0px 0px;
+    font-family: regular;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
